@@ -22,8 +22,11 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
 
+    - name: Inject Gradle Wrapper
+      run: gradle wrapper --gradle-version 8.5
+
     - name: Build APK
-      run: ./gradlew assembleDebug || gradlew assembleDebug
+      run: ./gradlew assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
