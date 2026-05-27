@@ -8,9 +8,4 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+// We removed the "allprojects" block from here because it's already handled by settings.gradle!
